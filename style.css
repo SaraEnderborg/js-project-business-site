@@ -1,0 +1,151 @@
+:root {
+    --bg: #f6f2ea;
+    --text: #1a1a1a;
+}
+
+
+body {
+    font-family: arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background-color: var(--bg);
+    margin: 0;
+    padding: 0;
+}
+
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    letter-spacing: 1px;
+    position: relative;
+    transition: all 0.3 ease;
+
+}
+
+
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+    }
+}
+
+
+
+.hero {
+    height: 100vh;
+    background: url('images/Hero.wedding.jpg') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    color: white;
+
+}
+
+
+.hero h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+
+}
+
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+
+.card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 1rem;
+}
+
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+.card h3 {
+    margin: 1rem 0 0.5rem;
+    color: #666;
+}
+
+
+.footer {
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    border-top: 1px solid #ddd;
+    font-size: 0.9rem;
+}
+
+
+@media (min-width:600px) {
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+@media (min-width:1024px) {
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+.navbar {
+    display: block;
+}
