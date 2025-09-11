@@ -9,38 +9,25 @@
 </head>
 
 <body>
-
     <div class="wrapper">
-
-
         <header class="header">
-
             <h1 class="logo">Photography by Louise</h1>
-
             <nav class="navbar">
                 <ul>
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">Wedding</a></li>
-                    <li><a href="#">Couple</a></li>
-                    <li><a href="#">Children</a></li>
+                    <li><a href="#">Mini-portfolio</a></li>
+                    <li><a href="#">About</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
-
-
         </header>
-
-
-
         <main>
-
             <section class="hero">
                 <h2>Catch the moments that means the most</h2>
-                <!--<img src="Hero.wedding.jpg" alt="wedding">-->
                 <p>Book a photosession for wedding, couples or children to
                     day!</p>
             </section>
-
+            
             <section class="grid">
                 <article class="card">
                     <img src="images/wed2.jpg" alt="wedding-beach">
@@ -54,15 +41,62 @@
                     <p>Capture love and you´re special moments</p>
                 </article>
 
-
                 <article class="card">
-                    <img src="images/kid1.jpg" alt="Children-photoshoot">
-                    <h3>Children</h3>
-                    <p>Natural and playfull portraits of children</p>
+                    <img src="images/kid1.jpg" alt="Family/Children-photoshoot">
+                    <h3>Family/Children</h3>
+                    <p>Natural and playfull portraits of family/children</p>
                 </article>
             </section>
         </main>
-
+        <section class="contact">
+            <h2>Book a session</h2>
+            <form action="http://httpbin.org/anything" method="POST">
+                <div class="formt-input">
+                    <label for="name">Name</label>
+                    <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Your full name" required
+                    />
+                </div>
+                <div class="formt-input">
+                    <label for="session">Type of session</label>
+                    <select name="session" id="session" required>
+                        <option value="wedding">Wedding</option>
+                        <option value="couple">Couple</option>
+                        <option value="family">Family/Children</option>
+                    </select>
+                </div>
+                <div class="formt-input">
+                    <label for="date">Preferred date</label>
+                    <input 
+                    type="date"
+                    name="date"
+                    id="date" required
+                    />
+                </div>
+                <div class="formt-input">
+                    <label for="email">Email</label>
+                    <input 
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="example@email.com" required
+                    />
+                </div>
+                <div class="formt-input">
+                    <label for="message">Message</label>
+                    <textarea 
+                    name="message"
+                    id="message"
+                    rows="5"
+                    placeholder="Tell me a bit about youre vision. . ." required>
+                </textarea>
+                </div>
+                <button type="submit">Send Request</button>
+            </form>
+        </section>
 
         <footer class="footer">
             <p> &copy; 2025 Photography by Louise</p>

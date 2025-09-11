@@ -137,3 +137,68 @@ body {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
+.contact {
+    max-width: 600px;
+    margin: 4rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    color: #333;
+
+}
+
+.contact h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.form-input {
+    display: flex;
+    flex-direction:column;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+label {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    box-sizing: border-box;
+    background: #f6f2ea;
+    color: #1a1a1a;
+    padding: 15px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #656363;
+}
+
+textarea {
+    background:#f6f2ea;
+    resize: vertical;
+}
+
+button {
+    padding: 15px;
+    border-radius: 50px;
+    border: none;
+    font-size: 16px;
+    background: #1a1a1a;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background: #333;
+}
