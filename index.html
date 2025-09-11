@@ -7,49 +7,52 @@
     <title> Photography by Louise</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+
     <div class="wrapper">
+
         <header class="header">
             <h1 class="logo">Photography by Louise</h1>
             <nav class="navbar">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Mini-portfolio</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#sessions">Sessions</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </header>
-        <main>
-            <section class="hero">
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
                 <h2>Catch the moments that means the most</h2>
-                <p>Book a photosession for wedding, couples or children to
-                    day!</p>
-            </section>
-            
-            <section class="grid">
+                <p>Beautiful memories, captured forever</p>
+                <a href="#contact" class="hero-button">Book a session</a>
+            </div>
+        </section>
+
+            <section id="Sessions" class="grid">
                 <article class="card">
                     <img src="images/wed2.jpg" alt="wedding-beach">
                     <h3>Wedding</h3>
-                    <p>Romantic pictures from youre big day.</p>
+                    <p>Romantic pictures from you´re big day.</p>
                 </article>
-
                 <article class="card">
-                    <img src="images/couple1.jpg" alt="Couple-photoshoot">
+                    <img src="images/couple1.jpg" alt="Couple-photo">
                     <h3>Couples</h3>
                     <p>Capture love and you´re special moments</p>
                 </article>
-
                 <article class="card">
-                    <img src="images/kid1.jpg" alt="Family/Children-photoshoot">
+                    <img src="images/kid1.jpg" alt="Family/Children-photo">
                     <h3>Family/Children</h3>
-                    <p>Natural and playfull portraits of family/children</p>
+                    <p>Natural and playful portraits of family/children</p>
                 </article>
             </section>
         </main>
-        <section class="contact">
-            <h2>Book a session</h2>
+
+        <section id="contact" class="contact">
+            <h2>Make a request</h2>
             <form action="http://httpbin.org/anything" method="POST">
                 <div class="formt-input">
                     <label for="name">Name</label>
@@ -91,7 +94,7 @@
                     name="message"
                     id="message"
                     rows="5"
-                    placeholder="Tell me a bit about youre vision. . ." required>
+                    placeholder="Let´s make a plan, tell me what you have in mind. . ." required>
                 </textarea>
                 </div>
                 <button type="submit">Send Request</button>

@@ -57,6 +57,10 @@ body {
 
 }
 
+.navbar a:hover {
+    color: #000;
+}
+
 
 @media (max-width: 1024px) {
     .navbar {
@@ -67,6 +71,7 @@ body {
 
 
 .hero {
+    position: relative;
     height: 100vh;
     background: url('images/Hero.wedding.jpg') center/cover no-repeat;
     display: flex;
@@ -79,26 +84,88 @@ body {
 
 }
 
+.hero-content {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
 
 .hero h2 {
     font-size: 2rem;
+    position: relative;
     margin-bottom: 1rem;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+}
 
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 
 .hero p {
     font-size: 1.2rem;
+    position: relative;
+    max-width: 600px;/* gör texten mer lättläst på breda skärmar */
+    margin: 0 auto;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
 }
 
+@media (max-width: 768px) {
+    .hero {
+        height: 70vh;
+        padding: 1.5rem;
+        background-attachment: scroll;}
+
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #333;
+    color: white;
+    font-weight: bold;
+    border-radius: 50px;
+    text-decoration: none;
+    margin-top: 400px;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.6s;
+    transition: background-color 0.3s ease, transform 0.2 ease;
+}
+
+.hero-button:hover {
+    background: #1a1a1a;
+    transform: scale(1.05);
+}
 
 .grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
-    margin: 2rem 0;
+    margin: 2rem auto;
 }
 
+@media (min-width:600px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+ .grid {
+    grid-template-columns: repeat(3, 1fr);
+ }
+}
 
 .card {
     background: white;
@@ -122,21 +189,6 @@ body {
     color: #666;
 }
 
-
-.footer {
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
-    border-top: 1px solid #ddd;
-    font-size: 0.9rem;
-}
-
-
-@media (min-width:600px) {
-    .grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
 
 .contact {
     max-width: 600px;
@@ -193,12 +245,20 @@ button {
     border-radius: 50px;
     border: none;
     font-size: 16px;
-    background: #1a1a1a;
+    background:  #333;
     color: white;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background: #333;
+    background:#1a1a1a;
+}
+
+.footer {
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    border-top: 1px solid #ddd;
+    font-size: 0.9rem;
 }
