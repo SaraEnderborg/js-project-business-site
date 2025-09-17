@@ -1,152 +1,140 @@
 :root {
-    --bg: #f6f2ea;
-    --text: #1a1a1a;
+  --bg: #f6f2ea;
+  --text: #1a1a1a;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
-
 
 body {
-    font-family: arial, sans-serif;
-    line-height: 1.6;
-    color: var(--text);
-    background-color: var(--bg);
-    margin: 0;
-    padding: 0;
+  font-family: arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--bg);
+  margin: 0;
+  padding: 0;
 }
-
 
 .wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
 }
-
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 0;
-    background-color: var(--bg);
-    color: var(--text);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  background-color: var(--bg);
+  color: var(--text);
 }
-
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
-
 
 .navbar ul {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
 }
 
-
 .navbar a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    letter-spacing: 1px;
-    position: relative;
-    transition: all 0.3 ease;
-
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  letter-spacing: 1px;
+  position: relative;
+  transition: all 0.3 ease;
 }
 
 .navbar a:hover {
-    color: #000;
+  color: #000;
 }
-
 
 @media (max-width: 1024px) {
-    .navbar {
-        display: none;
-    }
+  .navbar {
+    display: none;
+  }
 }
 
-
-
 .hero {
-    position: relative;
-    height: 100vh;
-    background: url('images/Hero.wedding.jpg') center/cover no-repeat;
-    padding: 2rem;
-    color: white;
-
+  position: relative;
+  height: 100vh;
+  background: url("images/Hero.wedding.jpg") center/cover no-repeat;
+  padding: 2rem;
+  color: white;
 }
 
 .hero-content {
-    height: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 1rem;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
 }
 
 .hero h2 {
-    font-size: 2rem;
-    position: relative;
-    margin-bottom: 1rem;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 1s ease forwards;
+  font-size: 2rem;
+  position: relative;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
 }
 
 @keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-
 .hero p {
-    font-size: 1.2rem;
-    position: relative;
-    max-width: 600px;
-    margin: 0 auto;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+  font-size: 1.2rem;
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
 }
 
 @media (max-width: 768px) {
-    .hero {
-        height: 70vh;
-        padding: 1.5rem;
-        background-attachment: scroll;}
-
+  .hero {
+    height: 70vh;
+    padding: 1.5rem;
+    background-attachment: scroll;
+  }
 }
 
 .hero-button {
-    margin-top: auto;
-    display: inline-block;
-    padding: 12px 24px;
-    background: #333;
-    color: white;
-    font-weight: bold;
-    border-radius: 50px;
-    text-decoration: none;
-    opacity: 0;
-    transform: translateY(10px);
-    animation: fadeInUp 1s ease forwards;
-    animation-delay: 0.6s;
-    transition: background-color 0.3s ease, transform 0.2 ease;
-    transform: translateX(-50%);
+  margin-top: auto;
+  display: inline-block;
+  padding: 12px 24px;
+  background: #333;
+  color: white;
+  font-weight: bold;
+  border-radius: 50px;
+  text-decoration: none;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.6s;
+  transition: background-color 0.3s ease, transform 0.2 ease;
+  transform: translateX(-50%);
 }
 
 .hero-button:hover {
-    background: #1a1a1a;
-    transform: scale(1.05);
+  background: #1a1a1a;
+  transform: scale(1.05);
 }
 
 .about-wrapper {
@@ -165,7 +153,7 @@ body {
   height: 200px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .about-text h2 {
@@ -186,120 +174,116 @@ body {
   }
 }
 
-
-
 .grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    margin: 2rem auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin: 2rem auto;
 }
 
-@media (min-width:600px) {
-    .grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
+@media (min-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media (min-width: 1024px) {
- .grid {
+  .grid {
     grid-template-columns: repeat(3, 1fr);
- }
+  }
 }
 
 .card {
-    background: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 1rem;
 }
-
 
 .card img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
-
 
 .card h3 {
-    margin: 1rem 0 0.5rem;
-    color: #666;
+  margin: 1rem 0 0.5rem;
+  color: #666;
 }
 
-
 .contact {
-    max-width: 600px;
-    margin: 4rem auto;
-    padding: 2rem;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    color: #333;
-
+  max-width: 600px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  color: #333;
 }
 
 .contact h2 {
-    text-align: center;
-    margin-bottom: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 form {
-    flex-direction: column;
-    display: flex;  
-    gap: 20px;
+  flex-direction: column;
+  display: flex;
+  gap: 20px;
 }
 
 .form-input {
-    display: flex;
-    flex-direction:column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 label {
-    margin-bottom: 10px;
-    font-weight: bold;
+  margin-bottom: 10px;
+  font-weight: bold;
 }
 
-input, select, textarea {
-    width: 100%;
-    box-sizing: border-box;
-    background: #f6f2ea;
-    color: #1a1a1a;
-    padding: 15px 10px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-family: inherit;
-    font-size: 16px;
+input,
+select,
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  background: #f6f2ea;
+  color: #1a1a1a;
+  padding: 15px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 16px;
 }
 
 input::placeholder,
 textarea::placeholder {
-    color: #656363;
+  color: #656363;
 }
 
 textarea {
-    background:#f6f2ea;
-    resize: vertical;
+  background: #f6f2ea;
+  resize: vertical;
 }
 
 button {
-    width: fit-content;
-    align-self:center;
-    padding: 15px;
-    border-radius: 50px;
-    border: none;
-    font-size: 16px;
-    background:  #333;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  width: fit-content;
+  align-self: center;
+  padding: 15px;
+  border-radius: 50px;
+  border: none;
+  font-size: 16px;
+  background: #333;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background:#1a1a1a;
+  background: #1a1a1a;
 }
 
 .portfolio {
@@ -321,19 +305,19 @@ button:hover {
   height: 250px;
   object-fit: cover;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .portfolio-grid img:hover {
   transform: scale(1.03);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 footer {
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
-    border-top: 1px solid #ddd;
-    font-size: 0.9rem;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  border-top: 1px solid #ddd;
+  font-size: 0.9rem;
 }
