@@ -70,7 +70,7 @@
               alt="wedding-beach"
             />
             <h3>Wedding</h3>
-            <p>Romantic pictures from you´re big day.</p>
+            <p>Romantic pictures from your big day.</p>
           </article>
 
           <article class="card">
@@ -79,7 +79,7 @@
               alt="Couple-photo"
             />
             <h3>Couples</h3>
-            <p>Capture love and you´re special moments</p>
+            <p>Capture love and your special moments</p>
           </article>
 
           <article class="card">
@@ -120,14 +120,45 @@
               name="session"
               id="session"
             >
+              <option value="">Please choose</option>
               <option value="wedding">Wedding</option>
               <option value="couple">Couple</option>
               <option value="family">Family/Children</option>
             </select>
-
           </div>
           <div class="form-input">
-            <label for="date">Preferred date</label>
+            <p>Preferred time of day:</p>
+            <label><input 
+                    type="radio"
+                    name="time" 
+                    value="morning"> Morning
+            </label>
+            <label><input 
+                    type="radio"
+                    name="time" 
+                    value="afternoon"> Afternoon
+            </label>
+            <label><input 
+                    type="radio"
+                    name="time" 
+                    value="Evening"> Evening
+            </label>
+             <label><input 
+                    type="radio"
+                    name="time" 
+                    value="whole"> Whole day
+            </label>
+          </div>
+          <div class="form-input">
+            <label>
+              <input 
+               type="checkbox"
+               name="newsletter"> Sign me up for news
+            </label>
+          </div>
+          <div class="form-input">
+            <label for="date">Preferred date
+            </label>
            <input
               required
               type="date"
