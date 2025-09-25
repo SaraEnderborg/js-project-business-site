@@ -4,6 +4,7 @@ const navLinks = document.querySelectorAll('.navbar a')
 
 hamburger.addEventListener('click', () => {
   navbar.classList.toggle('show')
+  hamburger.classList.toggle('open')
   hamburger.textContent = navbar.classList.contains('show') ? '✕' : '☰'
 });
 

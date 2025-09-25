@@ -33,20 +33,25 @@ body {
   z-index: 1;
 }
 
-.logo {
+h1 {
+  line-height: 1.2;
   position: relative;
   font-family: 'Great Vibes', cursive;
   font-size: 2.5rem;
   font-weight: 400;
   letter-spacing: 1px;
-  z-index:20;
+  margin: 0;
 }
+
+.navbar {
+  display: block;
+  }
 
 .navbar ul {
   list-style: none;
   display: flex;
+  flex-direction: row;
   gap: 1.5rem;
-  justify-content: center;
   margin: 0;
   padding: 0;
 }
@@ -56,30 +61,38 @@ body {
   color: #333;
   font-weight: bold;
   letter-spacing: 1px;
-  position: relative;
-  transition: all 0.3s ease;
+  font-size: 1.2rem;
+  display: block;
+  padding: o.5rem 0;
+  transition: color 0.3s ease;
 }
 
 .navbar a:hover {
   color: #000;
+  transform: scale(1.05);
+  transition: all 200ms ease-in-out;
 }
 
-  .hamburger {
-    position: relative;
-    display: none;
-    font-size: 2rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #333;
-    z-index: 20;
-    outline: none;
-    box-shadow: none;
-  }
+.hamburger {
+  align-self: start;
+  padding: 0;
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  z-index: 30;
+}
+
+.hamburger.open {
+  position: fixed;
+  right: 16px;
+}
 
   .hamburger:active {
   transform: scale(0.9);
-  color: #555555;
+  color: #555;
 }
 
   @media (max-width: 768px) {
@@ -88,31 +101,32 @@ body {
     }
 
   .navbar {
-    position: absolute;
-    top: 70px;
+    position: fixed;
+    top: 0;
     left: 0;
     width: 100%;
     background-color: var(--bg);
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    padding: 1rem;
-    transform: translateY(-100%);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    padding: 1rem 0;
+    transform: scaleY(0);
+    transform-origin: top;
     transition: transform 0.3s ease-in-out;
-    z-index: 10;
+    z-index: 20;
   }
 
   .navbar.show {
-    transform: translateY(0);
+    transform: scaleY(1);
+  
   }
 
   .navbar ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    margin: 0;
-    padding: 0;
-  }
+  flex-direction: column;
+  gap: 0.8rem;
+  width: 100%;
+  align-items: center;
+}
 
   .navbar ul li {
     opacity:0;
@@ -143,7 +157,6 @@ body {
 
 .hero-content {
   height: 100%;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
